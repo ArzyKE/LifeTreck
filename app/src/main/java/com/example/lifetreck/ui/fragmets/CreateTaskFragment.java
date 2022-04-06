@@ -1,4 +1,4 @@
-package com.example.lifetreck;
+package com.example.lifetreck.ui.fragmets;
 
 import android.os.Bundle;
 
@@ -11,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.lifetreck.R;
 import com.example.lifetreck.databinding.FragmentCreateTaskBinding;
-import com.example.lifetreck.databinding.FragmentTaskBinding;
 
 public class CreateTaskFragment extends Fragment {
     private FragmentCreateTaskBinding binding;
@@ -20,7 +20,6 @@ public class CreateTaskFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         binding = FragmentCreateTaskBinding.inflate(getLayoutInflater());
         return binding.getRoot();
     }
@@ -35,7 +34,6 @@ public class CreateTaskFragment extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putString("key",text);
                 Navigation.findNavController(requireView()).navigate(R.id.taskFragment,bundle);
-
 
             }
         });

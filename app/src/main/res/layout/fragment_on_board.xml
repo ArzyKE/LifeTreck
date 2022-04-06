@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6C70D5"
+    tools:context=".ui.fragmets.OnBoardFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/worm_dot"
+        android:layout_width="wrap_content"
+        app:dotsColor="@color/green"
+        android:padding="12dp"
+        android:layout_gravity="center_horizontal"
+        app:selectedDotColor="#00E0FF"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

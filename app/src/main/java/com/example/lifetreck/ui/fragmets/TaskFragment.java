@@ -1,5 +1,5 @@
 
-package com.example.lifetreck;
+package com.example.lifetreck.ui.fragmets;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import com.example.lifetreck.R;
 import com.example.lifetreck.databinding.FragmentTaskBinding;
 
 public class TaskFragment extends Fragment {
@@ -28,7 +29,9 @@ public class TaskFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         initClickers();
         setData();
+      
     }
+
 
     private void setData() {
         if (getArguments() != null) {
@@ -43,4 +46,5 @@ public class TaskFragment extends Fragment {
             Navigation.findNavController(requireView()).navigate(R.id.createTaskFragment);
         });
     }
+
 }

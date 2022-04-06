@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="12dp"
-    tools:context=".CreateTaskFragment">
+    tools:context=".ui.fragmets.CreateTaskFragment">
 
     <EditText
         android:id="@+id/text_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="text"
+        android:inputType="number"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40sp"
