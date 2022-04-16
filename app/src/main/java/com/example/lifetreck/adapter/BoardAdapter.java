@@ -49,7 +49,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
         }
 
         public void onBind(BoardModel model) {
-            binding.boardImg.setImageResource(model.getImage());
+           binding.boardImg.setAnimation(model.getAnimation());
             binding.descriptionTv.setText(model.getDescription());
             binding.nextBtn.setText(model.getButtonText());
             binding.nextBtn.setOnClickListener(new View.OnClickListener() {

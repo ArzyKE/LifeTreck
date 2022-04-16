@@ -5,19 +5,28 @@
     android:id="@+id/nav_graph.xml"
     app:startDestination="@id/onBoardFragment">
 
-    <fragment
+    <dialog
         android:id="@+id/createTaskFragment"
         android:name="com.example.lifetreck.ui.fragmets.CreateTaskFragment"
         android:label="fragment_create_task"
-        tools:layout="@layout/fragment_create_task" />
-    <fragment
-        android:id="@+id/taskFragment"
-        android:name="com.example.lifetreck.ui.fragmets.TaskFragment"
-        android:label="fragment_task"
-        tools:layout="@layout/fragment_task" />
+        tools:layout="@layout/fragment_create_task" >
+        <action
+            android:id="@+id/action_createTaskFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+    </dialog>
+
     <fragment
         android:id="@+id/onBoardFragment"
         android:name="com.example.lifetreck.ui.fragmets.OnBoardFragment"
         android:label="fragment_on_board"
         tools:layout="@layout/fragment_on_board" />
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.lifetreck.ui.fragmets.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task" >
+        <action
+            android:id="@+id/action_taskFragment_to_createTaskFragment"
+            app:destination="@id/createTaskFragment" />
+    </fragment>
 </navigation>

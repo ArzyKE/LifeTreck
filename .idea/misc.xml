@@ -3,16 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/drawable/bottom_shit.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/drawable/dots_select.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/drawable/ic_unsplash.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/drawable/ic_unsplash_rcowmc8qf8a.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/drawable/raunder.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/drawable/raunder2.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/drawable/raunder3.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/activity_main.xml" value="0.1308876811594203" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/fragment_create_task.xml" value="0.1308876811594203" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/fragment_on_board.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/fragment_task.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/bottom_shit.xml" value="0.1796875" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/fragment_create_task.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/fragment_on_board.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/fragment_ottom.xml" value="0.1796875" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/fragment_task.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/item.xml" value="0.14743589743589744" />
         <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/item_board.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/item_list.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/layout_bottom_shit.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/LifeTreck/app/src/main/res/layout/regular_dialog.xml" value="0.1796875" />
       </map>
     </option>
   </component>

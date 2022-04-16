@@ -1,7 +1,8 @@
 package com.example.lifetreck.ui.fragmets;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +24,10 @@ import java.util.ArrayList;
 public class OnBoardFragment extends Fragment implements ItemClickListener {
     FragmentOnBoardBinding binding;
     BoardAdapter adapter;
-    ArrayList<BoardModel> list ;
-
+    ArrayList<BoardModel> list;
+    SharedPreferences preferences;
+    final String FILE_NAME = "board_file";
+    final String IS_SHOW_KEY = "isShow";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,14 +40,23 @@ public class OnBoardFragment extends Fragment implements ItemClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        checkOnShowBoard();
         initAdapter();
 
+    }
+
+    private void checkOnShowBoard() {
+        preferences = requireActivity().getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
+        boolean isShow = preferences.getBoolean(IS_SHOW_KEY, false);
+        if (isShow) {
+            Navigation.findNavController(requireView()).navigate(R.id.taskFragment);
+        }
     }
 
 
     private void initAdapter() {
         list = BoardClient.getList();
-        adapter = new BoardAdapter(list,this );
+        adapter = new BoardAdapter(list, this);
         binding.pager.setAdapter(adapter);
         binding.wormDot.setViewPager2(binding.pager);
 
@@ -53,9 +65,11 @@ public class OnBoardFragment extends Fragment implements ItemClickListener {
 
     @Override
     public void itemClick(int position) {
-        if (position == 0 || position == 1){
+        if (position == 0 || position == 1) {
             binding.pager.setCurrentItem(binding.pager.getCurrentItem() + 1);
-        }else {
+            preferences = requireActivity().getSharedPreferences("board_file", Context.MODE_PRIVATE);
+            preferences.edit().putBoolean("isShow", true).apply();
+        } else {
             Navigation.findNavController(requireView()).navigate(R.id.taskFragment);
         }
     }

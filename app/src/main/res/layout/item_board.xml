@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/board_img"
         android:layout_width="match_parent"
         android:layout_height="310dp"
         android:layout_marginTop="90dp"
         android:scaleType="fitXY"
-        android:src="@color/black"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="tame.json"
+        app:lottie_loop="true" />
 
     <TextView
         android:id="@+id/description_tv"

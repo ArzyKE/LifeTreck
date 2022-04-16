@@ -7,6 +7,7 @@
         android:topRightRadius="5000dp"/>
     <stroke android:width="3dp"
         android:color="@color/purple_500"/>
+        <solid android:color="@android:color/holo_blue_bright"/>
 
 
 </shape>
