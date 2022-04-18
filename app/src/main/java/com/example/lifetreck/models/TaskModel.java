@@ -1,6 +1,12 @@
 package com.example.lifetreck.models;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "task_model")
 public class TaskModel {
+    @PrimaryKey(autoGenerate = true)
+    private int id;
     private String title;
     private String regular;
     private String date;
@@ -9,6 +15,10 @@ public class TaskModel {
         this.title = title;
         this.regular = regular;
         this.date = date;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -22,4 +32,9 @@ public class TaskModel {
     public String getDate() {
         return date;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }

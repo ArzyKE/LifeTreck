@@ -1,11 +1,9 @@
 package com.example.lifetreck.models;
 
-import com.example.lifetreck.R;
-//shitcode
-
 import java.util.ArrayList;
 
 public class BoardClient {
+
     public static ArrayList<BoardModel> list = new ArrayList<>();
 
     public static ArrayList<BoardModel> getList() {

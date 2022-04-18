@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,13 +25,11 @@ import java.util.Calendar;
 public class CreateTaskFragment extends BottomSheetDialogFragment {
 
     private FragmentCreateTaskBinding binding;
-    RadioGroup radioGroup;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentCreateTaskBinding.inflate(inflater, container, false);
-
         return binding.getRoot();
     }
 
@@ -45,7 +44,7 @@ public class CreateTaskFragment extends BottomSheetDialogFragment {
             @Override
             public void onClick(View view) {
                 String title = binding.textEt.getText().toString();
-                String date = binding.dataBtn.getContext().toString();
+                String date = binding.dataBtn.getText().toString();
                 String frequency = binding.regularBtn.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("text", title);
@@ -70,7 +69,6 @@ public class CreateTaskFragment extends BottomSheetDialogFragment {
         });
     }
 
-
     public DatePickerDialog datePickerDialog() {
         final Calendar newCalendar = Calendar.getInstance();
         final DatePickerDialog startTime = new DatePickerDialog(requireContext(), new DatePickerDialog.OnDateSetListener() {
@@ -78,6 +76,11 @@ public class CreateTaskFragment extends BottomSheetDialogFragment {
             public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
                 Calendar newDate = Calendar.getInstance();
                 newDate.set(year, monthOfYear, dayOfMonth);
+                if (monthOfYear < 10) {
+                    int month = monthOfYear + 1;
+                    binding.dataBtn.setText(dayOfMonth + ".0" + month + "." + year);
+
+                }
             }
         }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
         return startTime;
@@ -85,14 +88,46 @@ public class CreateTaskFragment extends BottomSheetDialogFragment {
 
     public void showDialog() {
         final Dialog dialog = new Dialog(requireActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(true);
         dialog.setContentView(R.layout.regular_dialog);
-        RadioButton everyDay = (RadioButton) dialog.findViewById(R.id.every_day);
-        everyDay.setOnClickListener(new View.OnClickListener() {
+        RadioButton day = (RadioButton) dialog.findViewById(R.id.once_a_day);
+        RadioButton week = (RadioButton) dialog.findViewById(R.id.once_a_year);
+        RadioButton month = (RadioButton) dialog.findViewById(R.id.once_a_month);
+        RadioButton year = (RadioButton) dialog.findViewById(R.id.once_a_week);
+        TextView cancel = (TextView) dialog.findViewById(R.id.once_a_day);
+
+        cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(requireContext(), "text", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
             }
         });
+        day.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.regularBtn.setText(day.getText().toString());
+            }
+        });
+        week.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.regularBtn.setText(week.getText().toString());
+            }
+        });
+        month.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.regularBtn.setText(month.getText().toString());
+            }
+        });
+        year.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.regularBtn.setText(year.getText().toString());
+            }
+        });
+
         dialog.show();
     }
 

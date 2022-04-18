@@ -10,25 +10,30 @@
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/every_day"
+            android:id="@+id/once_a_year"
             android:text="Раз в год"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
+            android:id="@+id/once_a_month"
             android:text="Раз в месяц"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
+            android:id="@+id/once_a_week"
             android:text="Раз в неделю"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <RadioButton
+            android:id="@+id/once_a_day"
             android:text="Раз в день"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+
     </RadioGroup>
 
 </LinearLayout>

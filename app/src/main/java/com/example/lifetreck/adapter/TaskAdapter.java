@@ -1,25 +1,32 @@
 package com.example.lifetreck.adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lifetreck.databinding.ItemListBinding;
-import com.example.lifetreck.interfeas.ItemClickListener;
+import com.example.lifetreck.interfeas.Listener;
 import com.example.lifetreck.models.TaskModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskHoder> {
-    private ArrayList<TaskModel> models = new ArrayList<>();
 
-    public TaskAdapter(ArrayList<TaskModel> models) {
+    private List<TaskModel> models = new ArrayList<>();
+    private Listener listener;
+
+    public void setList(List<TaskModel> models) {
         this.models = models;
         notifyDataSetChanged();
     }
 
+    public void setListener(Listener listener) {
+        this.listener = listener;
+    }
 
     @NonNull
     @Override
@@ -39,25 +46,24 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskHoder> {
         return models.size();
     }
 
-    public void setData(TaskModel taskModel) {
-        this.models.add(taskModel);
-        notifyDataSetChanged();
-    }
-
     public class TaskHoder extends RecyclerView.ViewHolder {
-        private final ItemListBinding binding;
+        private ItemListBinding binding;
 
         public TaskHoder(@NonNull ItemListBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
-
         }
 
         public void onBind(TaskModel taskModel) {
             binding.tvText.setText(taskModel.getTitle());
             binding.tvCalendar.setText(taskModel.getDate());
             binding.tvRegular.setText(taskModel.getRegular());
-
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.click(taskModel);
+                }
+            });
         }
     }
 }

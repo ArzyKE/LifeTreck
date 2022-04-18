@@ -22,6 +22,7 @@ import com.example.lifetreck.models.BoardModel;
 import java.util.ArrayList;
 
 public class OnBoardFragment extends Fragment implements ItemClickListener {
+
     FragmentOnBoardBinding binding;
     BoardAdapter adapter;
     ArrayList<BoardModel> list;
@@ -53,14 +54,11 @@ public class OnBoardFragment extends Fragment implements ItemClickListener {
         }
     }
 
-
     private void initAdapter() {
         list = BoardClient.getList();
         adapter = new BoardAdapter(list, this);
         binding.pager.setAdapter(adapter);
         binding.wormDot.setViewPager2(binding.pager);
-
-
     }
 
     @Override
@@ -80,5 +78,4 @@ public class OnBoardFragment extends Fragment implements ItemClickListener {
         binding = null;
         list.clear();
     }
-
 }

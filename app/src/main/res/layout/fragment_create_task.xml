@@ -17,27 +17,27 @@
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
+    <TextView
         android:id="@+id/data_btn"
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:background="@drawable/raunder3"
         android:hint="17.18.2022"
-        android:padding="25dp"
+        android:padding="13dp"
         android:textAlignment="center"
         android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/regular_btn"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_et" />
+        app:layout_constraintTop_toBottomOf="@id/regular_btn" />
 
     <RadioButton
         android:id="@+id/regular_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="180dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/raunder3"
-        android:hint="Каждый день"
+        android:hint="select"
         android:padding="10dp"
         android:textAlignment="center"
         android:textSize="20sp"

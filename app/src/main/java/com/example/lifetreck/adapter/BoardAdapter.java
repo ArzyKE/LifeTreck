@@ -14,6 +14,7 @@ import com.example.lifetreck.models.BoardModel;
 import java.util.ArrayList;
 
 public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHolder> {
+
     ArrayList<BoardModel> list;
     ItemClickListener listener;
 
@@ -49,17 +50,15 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.BoardViewHol
         }
 
         public void onBind(BoardModel model) {
-           binding.boardImg.setAnimation(model.getAnimation());
+            binding.boardImg.setAnimation(model.getAnimation());
             binding.descriptionTv.setText(model.getDescription());
             binding.nextBtn.setText(model.getButtonText());
             binding.nextBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     listener.itemClick(getAdapterPosition());
-
                 }
             });
-
         }
     }
 }

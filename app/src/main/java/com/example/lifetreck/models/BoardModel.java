@@ -1,6 +1,7 @@
 package com.example.lifetreck.models;
 
 public class BoardModel {
+
     private String animation;
     private String description;
     private String buttonText;
