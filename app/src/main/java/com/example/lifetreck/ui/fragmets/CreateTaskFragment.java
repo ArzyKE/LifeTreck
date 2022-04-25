@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -79,7 +78,6 @@ public class CreateTaskFragment extends BottomSheetDialogFragment {
                 if (monthOfYear < 10) {
                     int month = monthOfYear + 1;
                     binding.dataBtn.setText(dayOfMonth + ".0" + month + "." + year);
-
                 }
             }
         }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
@@ -130,6 +128,4 @@ public class CreateTaskFragment extends BottomSheetDialogFragment {
 
         dialog.show();
     }
-
-
 }

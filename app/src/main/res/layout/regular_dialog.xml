@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RadioGroup
         android:layout_width="match_parent"
-        android:padding="12dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="12dp">
 
         <RadioButton
             android:id="@+id/once_a_year"
-            android:text="Раз в год"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Раз в год" />
 
         <RadioButton
             android:id="@+id/once_a_month"
-            android:text="Раз в месяц"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Раз в месяц" />
 
         <RadioButton
             android:id="@+id/once_a_week"
-            android:text="Раз в неделю"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Раз в неделю" />
 
         <RadioButton
             android:id="@+id/once_a_day"
-            android:text="Раз в день"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Раз в день" />
 
 
     </RadioGroup>

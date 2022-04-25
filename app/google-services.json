@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "717597049605",
+    "project_id": "lifetreck",
+    "storage_bucket": "lifetreck.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717597049605:android:3a1935aebbe3c2c591ed6c",
+        "android_client_info": {
+          "package_name": "com.example.lifetreck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717597049605-a2kb5ts81oevkc30u1qjja9hfr204e8b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lifetreck",
+            "certificate_hash": "d5e4c8864f1ee85d9aff3a569819662f02393ae7"
+          }
+        },
+        {
+          "client_id": "717597049605-eccdtvqd8bhrsvjbma22ufpbd18g1qsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY_aHkTMJN54e9SIw_hpQH5oxclqLg1EQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717597049605-eccdtvqd8bhrsvjbma22ufpbd18g1qsq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

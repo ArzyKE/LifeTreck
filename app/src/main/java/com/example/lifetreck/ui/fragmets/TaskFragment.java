@@ -42,7 +42,6 @@ public class TaskFragment extends Fragment {
         setData();
         initAdapter1();
         onItemClick();
-
     }
 
     private void initAdapter1() {

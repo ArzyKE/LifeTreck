@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/onBoardFragment">
+    app:startDestination="@id/taskFragment">
 
     <dialog
         android:id="@+id/createTaskFragment"
@@ -29,4 +29,19 @@
             android:id="@+id/action_taskFragment_to_createTaskFragment"
             app:destination="@id/createTaskFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/finishRegistrationFragment"
+        android:name="com.example.lifetreck.ui.fragmets.auth.FinishRegistrationFragment"
+        android:label="fragment_finish_registration"
+        tools:layout="@layout/fragment_finish_registration" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.lifetreck.ui.fragmets.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.lifetreck.ui.fragmets.auth.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
 </navigation>

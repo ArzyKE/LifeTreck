@@ -29,13 +29,13 @@ public class OnBoardFragment extends Fragment implements ItemClickListener {
     SharedPreferences preferences;
     final String FILE_NAME = "board_file";
     final String IS_SHOW_KEY = "isShow";
+    public static boolean isShowOnBoard = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentOnBoardBinding.inflate(getLayoutInflater());
         return binding.getRoot();
-
     }
 
     @Override
@@ -43,14 +43,13 @@ public class OnBoardFragment extends Fragment implements ItemClickListener {
         super.onViewCreated(view, savedInstanceState);
         checkOnShowBoard();
         initAdapter();
-
     }
 
     private void checkOnShowBoard() {
         preferences = requireActivity().getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
         boolean isShow = preferences.getBoolean(IS_SHOW_KEY, false);
         if (isShow) {
-            Navigation.findNavController(requireView()).navigate(R.id.taskFragment);
+            Navigation.findNavController(requireView()).navigate(R.id.registrationFragment);
         }
     }
 
@@ -68,7 +67,7 @@ public class OnBoardFragment extends Fragment implements ItemClickListener {
             preferences = requireActivity().getSharedPreferences("board_file", Context.MODE_PRIVATE);
             preferences.edit().putBoolean("isShow", true).apply();
         } else {
-            Navigation.findNavController(requireView()).navigate(R.id.taskFragment);
+            Navigation.findNavController(requireView()).navigate(R.id.registrationFragment);
         }
     }
 
